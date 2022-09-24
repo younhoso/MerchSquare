@@ -18,6 +18,7 @@ const theme = {
     black:      "#000000",
     white:      "#ffffff",
     grayF4:     "#f4f4f4",
+    gray9e:     "#9e9e9e",
     grean:      "#16aa56",
   },
 }
