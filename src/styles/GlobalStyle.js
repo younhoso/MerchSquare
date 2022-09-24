@@ -24,6 +24,9 @@ const GlobalStyles = createGlobalStyle`
       color: ${({ theme }) => theme.colors.black};
     }
   }
+  img {
+    width: 100%;
+  }
   button, 
   input,
   textarea {

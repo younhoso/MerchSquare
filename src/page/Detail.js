@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import Hearder from "../components/Hearder";
 
 const Detail = () => {
   return (
-    <div>디테일</div>
+    <Hearder/>
   )
 }
 

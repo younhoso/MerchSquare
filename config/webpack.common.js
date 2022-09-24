@@ -20,6 +20,15 @@ module.exports = {
         use: "babel-loader",
         exclude: /node_modules/,
       },
+      {
+        test: /\.(png|svg|jpe?g|gif)$/,
+        use: [{
+            loader: 'url-loader',
+            options: {
+              name: '[path][name].[ext]',
+            }
+        }]
+      }
     ],
   },
   plugins: [

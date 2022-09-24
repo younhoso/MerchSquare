@@ -9,24 +9,26 @@ const Button = ({width, height, color, bgColor, borderRadius, fontSize, lineHeig
 }
 
 Button.defaultProps = {
-	width: "63px",
+	width: "auto",
 	height: "33px",
 	color : "#fff",
 	bgColor : "#000",
-	borderRadius: "0.4rem"
+	borderRadius: "0.4rem",
+	padding: "0 0.9rem",
 }
 
 const BtnBx = styled.button`
 	${({theme}) => {
 		const {fontWeight} = theme;
 		return css `
-			width: ${props => props._width};
-			height: ${props => props._height};
-			font-size: ${props => props._fontSize};
+			width: ${props => props.width};
+			height: ${props => props.height};
+			font-size: ${props => props.fontSize};
 			font-weight: ${fontWeight.regular};
-			color: ${props => props._color};
-			background-color: ${props => props._bgColor};
-			border-radius: ${props => props._borderRadius};
+			color: ${props => props.color};
+			background-color: ${props => props.bgColor};
+			border-radius: ${props => props.borderRadius};
+			padding: ${props => props.padding}
 		`
 	}}
 `
