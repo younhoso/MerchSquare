@@ -1,4 +1,6 @@
+import Detail from "./page/Detail";
+
 const App = () => {
-	return <div>Hi~</div>;
+	return <Detail />;
 }
 export default App;
