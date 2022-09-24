@@ -6,6 +6,7 @@ const theme = {
     font14: "14px",
     font16: "16px",
     font18: "18px",
+    font28: "28px",
   },
 
   fontWeight: {
