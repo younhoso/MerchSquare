@@ -4,12 +4,12 @@ import Button from "../elements/Button";
 import MyImage from '/src/assets/img/logo.png';
 
 const Hearder = () => {
-  const personInfo = useRef();
+  const menuMobile = useRef();
   const moHamberger = () => {
-    if(personInfo.current && !personInfo.current.classList.contains('active')){
-      personInfo.current.classList.add('active');
+    if(menuMobile.current && !menuMobile.current.classList.contains('active')){
+      menuMobile.current.classList.add('active');
     } else {
-      personInfo.current.classList.remove('active');
+      menuMobile.current.classList.remove('active');
     }
   }
 
@@ -25,7 +25,7 @@ const Hearder = () => {
             </div>
           </div>
 				
-          <div className="menu_mo_hidden" ref={personInfo}>
+          <div className="menu_mo_hidden" ref={menuMobile}>
             <ul className="">
               <li><a href="#0">Market</a></li>
               <li><a href="#0">Artist</a></li>
@@ -42,7 +42,7 @@ const Hearder = () => {
 				<nav>
 					<a className="logo" href="/"><img src={MyImage} alt="COJAM NFT"/></a>
 					<div className="menu_inner">
-            <ul>
+            <ul className='menu_pc'>
               <li className="menu"><a href="#0">Market</a></li>
               <li className="menu"><a href="#0">Artist</a></li>
               <li className="menu"><a href="#0">News</a></li>
@@ -64,71 +64,117 @@ const Header = styled.header`
   return css `
     width: 100%;
     border-bottom: 1px solid #EEEEEE;
-    background-color: rgba(31,30,28,.9019607843137255);
+    background-color: rgba(31,30,28,.9);
     position: relative;
 
     .header_inner_PC {display: none;}
-    .header_inner_MO {
-      display: block;
+    .header_inner_MO {display: block;}
+
+    .header_inner_MO a {
+      font-size: ${fontSizes.font16};
+      font-weight: ${fontWeight.semiBold};
+      color: ${colors.white};
+    }
+
+    .header_inner_PC a {
+      font-size: ${fontSizes.font12};
+      font-weight: ${fontWeight.semiBold};
+      color: ${colors.white};
+    }
+   
+    nav {
+      position: relative;
+      .menu_mo_inner {
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+      }
+      .menu_mo {
+        width: 60px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .logo {
+        width: 100px;
+        display: block;
+      }
+
+      .menu_mo_hidden {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 70px;
+        left: 100%;
+        transition: all 0.15s ease-in-out;
+        background-color: rgba(31,30,28,.9);
+
+        a {
+          display: block;
+          color: #fff;
+          padding: 20px 0;
+        }
+      }
+      .menu_mo_hidden.active {
+        left: 0
+      }
+    }
+
+    @media only screen and (min-width: 768px){
+      .header_inner_PC {display: block;}
+      .header_inner_MO {display: none;}
+
+      .header_inner_PC {
+        max-width: 1320px;
+        height: 70px;
+        line-height: 70px;
+        margin: 0px auto;
+        padding-left: calc(50% - 400px);
+        padding-right: calc(50% - 400px);
+        box-sizing: border-box;
+      }
       nav {
-        position: relative;
-        .menu_mo_inner {
-          height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        
+        .menu_inner {
+          width: 72%;
           display: flex;
-          justify-content: space-between;
+          justify-content: center;
           align-items: center;
-          padding: 0 30px;
-          .menu_mo {
-            width: 60px;
-            display: flex;
-            justify-content: space-between; 
+        }
+        .menu_pc {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          .menu {
+            width: 100%;
             a {
-              font-size: ${fontSizes.font18};
-              font-weight: ${fontWeight.semiBold};
-              color: ${colors.white};
+              width: calc(50% / 2);
             }
           }
-          .logo {
-            display: block;
-            width: 138px;
-          }
         }
-
-        .menu_mo_hidden {
-          width: 100%;
+        .search {
+          width: 70px;
           text-align: center;
-          position: absolute;
-          top: 70px;
-          left: 100%;
-          transition: all 0.2s ease-in-out;
-          background-color: #000;
-
-          a {
-            display: block;
-            color: #fff;
-            padding: 20px 0;
+          a{
+            font-size: ${fontSizes.font16};
           }
-        }
-        .menu_mo_hidden.active {
-          left: 0
         }
       }
     }
 
 
-    @media only screen and (min-width: 768px){
-      .header_inner_MO {display: none;}
+    @media only screen and (min-width: 1024px){
       .header_inner_PC {
-        max-width: 1320px;
-        margin: 0px auto;
-        padding: 0 20px;
-        box-sizing: border-box;
-        display: block;
-        nav {
-      
-        }
+        padding-left: 150px;
+        padding-right: 150px;
       }
-      
     }
   `
   }}

@@ -12,6 +12,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     color: ${({ theme }) => theme.colors.black};
     background-color: ${({ theme }) => theme.colors.white};
     font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
@@ -26,6 +27,7 @@ const GlobalStyles = createGlobalStyle`
   }
   img {
     width: 100%;
+    vertical-align: middle;
   }
   button, 
   input,
