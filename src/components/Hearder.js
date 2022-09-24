@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import styled, {css} from "styled-components";
 import Button from "../elements/Button";
-import MyImage from '/src/assets/img/logo.png';
+import MyImage from '/src/assets/img/logo_header.png';
 
 const Hearder = () => {
   const menuMobile = useRef();
@@ -14,7 +14,7 @@ const Hearder = () => {
   }
 
   return (
-    <Header>
+    <HearderSt>
       <div className="header_inner_MO">
 				<nav>
           <div className="menu_mo_inner">
@@ -54,11 +54,11 @@ const Hearder = () => {
 					</div>
 				</nav>
 			</div>
-    </Header>
+    </HearderSt>
   )
 };
 
-const Header = styled.header`
+const HearderSt = styled.header`
   ${({theme}) => {
   const {fontSizes, fontWeight, colors} = theme;
   return css `
@@ -95,6 +95,10 @@ const Header = styled.header`
         width: 60px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        .hamberger {
+          a{font-size: 22px;}
+        }
       }
       .logo {
         width: 100px;
@@ -103,6 +107,7 @@ const Header = styled.header`
 
       .menu_mo_hidden {
         width: 100%;
+        height: 100vh;
         text-align: center;
         position: absolute;
         top: 70px;
@@ -168,7 +173,6 @@ const Header = styled.header`
         }
       }
     }
-
 
     @media only screen and (min-width: 1024px){
       .header_inner_PC {
