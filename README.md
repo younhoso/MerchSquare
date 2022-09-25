@@ -1,4 +1,4 @@
-# 🤝 COJAM NFT 과제
+# COJAM NFT 과제
 webpack5+react+babel 기반의 boilerplate입니다.\
 내가 원하는 방향으로 정확히 설정하기 위해서 이러한 초기 설정을 진행해 봤습니다.
 

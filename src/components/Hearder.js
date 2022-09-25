@@ -82,7 +82,7 @@ const HearderSt = styled.header`
     .header_inner_PC {height: 70px;line-height: 70px;padding-left: calc(50% - 400px);padding-right: calc(50% - 400px);box-sizing: border-box;}
     .header_inner_PC nav {display: flex;justify-content: space-between;align-items: center;padding: 0 20px;}
     .header_inner_PC nav .logo {width: 100px;display: block;}
-    .header_inner_PC nav .menu_inner {width: 72%;display: flex;justify-content: center;align-items: center;}
+    .header_inner_PC nav .menu_inner {width: 82%;display: flex;justify-content: center;align-items: center;}
     .header_inner_PC nav .menu_pc {width: 100%;display: flex;justify-content: flex-end;align-items: center;text-align: center;}
     .header_inner_PC nav .menu {width: 16%;}
     .header_inner_PC nav .menu a {width: calc(50% / 2);}
