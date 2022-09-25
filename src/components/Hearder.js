@@ -79,22 +79,18 @@ const HearderSt = styled.header`
   @media only screen and (min-width: 768px){
     .header_inner_MO {display: none;}
     .header_inner_PC {display: block;}
-    .header_inner_PC {max-width: 1320px;height: 70px;line-height: 70px;margin: 0px auto;padding-left: calc(50% - 400px);padding-right: calc(50% - 400px);box-sizing: border-box;}
+    .header_inner_PC {height: 70px;line-height: 70px;padding-left: calc(50% - 400px);padding-right: calc(50% - 400px);box-sizing: border-box;}
     .header_inner_PC nav {display: flex;justify-content: space-between;align-items: center;padding: 0 20px;}
-    .header_inner_PC nav .menu_pc {}
     .header_inner_PC nav .logo {width: 100px;display: block;}
     .header_inner_PC nav .menu_inner {width: 72%;display: flex;justify-content: center;align-items: center;}
-    .header_inner_PC nav .menu_pc {width: 100%;display: flex;justify-content: center;align-items: center;text-align: center;}
-    .header_inner_PC nav .menu { width: 100%;}
+    .header_inner_PC nav .menu_pc {width: 100%;display: flex;justify-content: flex-end;align-items: center;text-align: center;}
+    .header_inner_PC nav .menu {width: 16%;}
     .header_inner_PC nav .menu a {width: calc(50% / 2);}
     .header_inner_PC nav .search { width: 70px; text-align: center;}
   }
 
   @media only screen and (min-width: 1024px){
-    .header_inner_PC {
-      padding-left: 150px;
-      padding-right: 150px;
-    }
+    .header_inner_PC {padding-left: 150px;padding-right: 150px;}
   }
 
   ${({theme}) => {
